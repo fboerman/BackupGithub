@@ -2,7 +2,7 @@ from secrets import TOKEN
 from github import Github
 
 g = Github(TOKEN)
-fstream = open('repos/giturls.txt', 'w')
+fstream = open('giturls.txt', 'w')
 for repo in g.get_user().get_repos():
     if repo.owner.login != 'fboerman':
         continue
